@@ -36,5 +36,17 @@ def dot(a, b):
         return sum([x * y for x, y in zip(a, b)])
 
 
+def vector_multiply(vector, scalar):
+    return [number * scalar for number in vector]
+
+
+def vector_mean(*args):
+    return [sum(values)/len(values) for values in zip(*args)]
+
+
+def magnitude(vector):
+    return sum([number**2 for number in vector]) ** (1/2)
+
+
 class ShapeError(Exception):
     pass
