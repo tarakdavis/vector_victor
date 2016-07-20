@@ -27,14 +27,14 @@ def test_shape_vectors():
     assert shape(v) == (3,)
 
 
-# def test_vector_add():
-#     """
-#     [a b]  + [c d]  = [a+c b+d]
-#     Matrix + Matrix = Matrix
-#     """
-#     assert vector_add(v, w) == [1, 5, 4]
-#     assert vector_add(u, y) == [11, 21, 31]
-#     assert vector_add(u, z) == u
+def test_vector_add():
+    """
+    [a b]  + [c d]  = [a+c b+d]
+    Matrix + Matrix = Matrix
+    """
+    assert vector_add(v, w) == [1, 5, 4]
+    assert vector_add(u, y) == [11, 21, 31]
+    assert vector_add(u, z) == u
 #
 #
 # def test_vector_add_is_commutative():
