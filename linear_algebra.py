@@ -6,7 +6,16 @@ def shape(vector):
 
 
 def vector_add(a, b):
-    return [x + y for x, y in zip(a, b)]
+    if shape(a) != shape(b):
+        raise ShapeError
+    else:
+        return [sum(values) for values in zip(a, b)]
 
-# class ShapeError(exception):
-#     pass
+
+# def poop(*args):
+#     print("the poop is", args)
+# poop('butt', 'toilet')
+
+
+class ShapeError(Exception):
+    pass
