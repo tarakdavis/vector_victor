@@ -11,10 +11,13 @@ def vector_add(a, b):
     else:
         return [sum(values) for values in zip(a, b)]
 
+def vector_sub(a, b):
+    if shape(a) != shape(b):
+        raise ShapeError
+    else:
+        return [x - y for x, y in zip(a, b)]
 
-# def poop(*args):
-#     print("the poop is", args)
-# poop('butt', 'toilet')
+
 
 
 class ShapeError(Exception):
